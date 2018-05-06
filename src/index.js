@@ -12,8 +12,8 @@ const channelAccessToken = 'sZ36AhH4LmXUCiG+xsLZPgEhjRsVbD4lB99NvcW/q5PD1mqNyp8y
 
 // init axios
 axios.defaults.baseURL = 'https://api.line.me';
-axios.defaults.post['Content-Type'] = 'application/json';
-axios.defaults.post['Authorization'] = `Bearer ${channelAccessToken}`;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Authorization'] = `Bearer ${channelAccessToken}`;
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
