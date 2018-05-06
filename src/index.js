@@ -28,9 +28,17 @@ app.post('/hook', function (req, res) {
     const eventObj = req.body.events[0];
     const source = eventObj.source;
     const replyToken = eventObj.replyToken;
-    const message = eventObj.message;
+    const receivedMessage = eventObj.message;
 
-    axios.post('/v2/bot/message/reply', {replyToken, message}).then(({data})=>{
+    console.log('eventObj', eventObj);
+
+    axios.post('/v2/bot/message/reply', {
+        replyToken,
+        messages: [{
+            type: "text",
+            "text": receivedMessage.text
+        }]
+    }).then(({data})=>{
         console.log('success', data);
         res.sendStatus(200);
     }).catch((e)=>{
