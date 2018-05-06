@@ -1,0 +1,19 @@
+{
+  "name": "random-bot",
+  "version": "1.0.0",
+  "description": "LINE Random Bot",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hg-pyun/random-bot.git"
+  },
+  "author": "Haegul Pyun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hg-pyun/random-bot/issues"
+  },
+  "homepage": "https://github.com/hg-pyun/random-bot#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
