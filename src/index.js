@@ -40,11 +40,11 @@ app.post('/hook', function (req, res) {
         }]
     }).then(({data})=>{
         console.log('success', data);
-        res.sendStatus(200);
     }).catch((e)=>{
         console.log('error', e);
-        res.sendStatus(500);
     });
+
+    res.sendStatus(200);
 });
 
 app.listen(PORT, function () {
