@@ -30,7 +30,7 @@ app.post('/hook', function (req, res) {
     const replyToken = eventObj.replyToken;
     const message = eventObj.message;
 
-    axios.post('https://api.line.me/v2/bot/message/reply', {replyToken, message}).then(({data})=>{
+    axios.post('/v2/bot/message/reply', {replyToken, message}).then(({data})=>{
         console.log('success', data);
         res.sendStatus(200);
     }).catch((e)=>{
