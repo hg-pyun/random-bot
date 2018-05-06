@@ -15,5 +15,8 @@
   "homepage": "https://github.com/hg-pyun/random-bot#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
